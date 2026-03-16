@@ -37,7 +37,11 @@ const AuthenticatedApp = () => {
   // Render the main app
   return (
     <Routes>
-      {/* Add your page Route elements here */}
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/Dashboard" element={<Dashboard />} />
+      <Route path="/Videos" element={<Videos />} />
+      <Route path="/Agent" element={<Agent />} />
+      <Route path="/Changes" element={<Changes />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
