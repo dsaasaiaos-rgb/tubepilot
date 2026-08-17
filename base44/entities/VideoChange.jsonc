@@ -1,0 +1,57 @@
+{
+  "name": "VideoChange",
+  "type": "object",
+  "properties": {
+    "video_id": {
+      "type": "string",
+      "description": "Reference to Video entity id"
+    },
+    "youtube_id": {
+      "type": "string"
+    },
+    "video_title": {
+      "type": "string"
+    },
+    "change_type": {
+      "type": "string",
+      "enum": [
+        "title",
+        "description",
+        "tags",
+        "status",
+        "scheduled"
+      ],
+      "description": "What was changed"
+    },
+    "old_value": {
+      "type": "string"
+    },
+    "new_value": {
+      "type": "string"
+    },
+    "applied_by": {
+      "type": "string",
+      "enum": [
+        "agent",
+        "manual"
+      ],
+      "default": "agent"
+    },
+    "applied_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "applied",
+        "reverted"
+      ],
+      "default": "applied"
+    }
+  },
+  "required": [
+    "youtube_id",
+    "change_type"
+  ]
+}

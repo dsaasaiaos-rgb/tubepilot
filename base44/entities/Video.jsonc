@@ -1,0 +1,66 @@
+{
+  "name": "Video",
+  "type": "object",
+  "properties": {
+    "youtube_id": {
+      "type": "string",
+      "description": "YouTube video ID"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "thumbnail_url": {
+      "type": "string"
+    },
+    "published_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "public",
+        "private",
+        "unlisted",
+        "scheduled"
+      ],
+      "default": "public"
+    },
+    "scheduled_publish_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "view_count": {
+      "type": "number"
+    },
+    "like_count": {
+      "type": "number"
+    },
+    "comment_count": {
+      "type": "number"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "channel_id": {
+      "type": "string"
+    },
+    "last_synced_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "youtube_id",
+    "title"
+  ]
+}
